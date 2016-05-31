@@ -12,5 +12,57 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Hello World!"
+        android:id="@+id/textView" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_marginTop="13dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="0"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create"
+        android:id="@+id/create_btn"
+        android:onClick="create_btn"
+        android:layout_below="@+id/progressBar"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginTop="37dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load"
+        android:id="@+id/load_btn"
+        android:layout_below="@+id/create_btn"
+        android:layout_toEndOf="@+id/textView"
+        android:nestedScrollingEnabled="false"
+        android:onClick="load_btnTest" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/clear_btn"
+        android:layout_below="@+id/load_btn"
+        android:layout_alignStart="@+id/load_btn"
+        android:onClick="clear_btn" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ListView"
+        android:choiceMode="multipleChoice"
+        android:layout_below="@+id/progressBar"
+        android:layout_toEndOf="@+id/create_btn" />
+
 </RelativeLayout>
